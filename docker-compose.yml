@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: ecommerce_db
+    ports:
+      - "5432:5432"
+
+  mongo:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+
+  redis:
+    image: redis:7.0
+    ports:
+      - "6379:6379"
+
+  neo4j:
+    image: neo4j:5.5
+    environment:
+      NEO4J_AUTH: neo4j/password
+    ports:
+      - "7474:7474"
+      - "7687:7687"
