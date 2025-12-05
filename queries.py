@@ -348,11 +348,7 @@ def execute_queries():
                 sys.stdout = f
             run_evaluation(limit)
     except Exception as e:
-        sys.stdout = sys.__stdout__
         print(f"\nerror evaluating queries: {e}")
-    finally:
-        if args.export:
-            sys.stdout = sys.__stdout__
     print(f"total execution time: {time.time() - start_time:.2f} seconds")
 
 # executing the queries
