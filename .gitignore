@@ -1,0 +1,4 @@
+.DS_Store
+/env
+data/logs/user_behavior_logs.json
+data/products/products.json
